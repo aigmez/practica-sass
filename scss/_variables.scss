@@ -1,0 +1,27 @@
+@use 'sass:color';
+
+$primary: #333333;
+$secondary: #cccccc;
+$violet: rgb(193, 60, 193);
+$success: green;
+$warning: orange;
+$error: red;
+$info: rgb(65, 126, 219);
+
+$colors: ("primary": $primary, 
+          "secondary": $secondary, 
+          "violet": $violet, 
+          "success": $success, 
+          "warning": $warning, 
+          "error": $error, 
+          "info": $info);
+
+$margin: 1rem;
+$padding: 1rem;
+
+$border-radius: 10px;
+$border-thickness: 1px;
+
+$font-size: 1rem;
+$font-size-small: $font-size * 0.8;
+$font-size-large: $font-size * 1.2;

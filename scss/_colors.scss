@@ -1,0 +1,33 @@
+@use "sass:color";
+
+@each $color, $value in $colors {
+    .text-#{$color}{
+        color: $value;
+    }
+    .bg-#{$color}{
+        background-color: $value;
+    } 
+    .btn-#{$color}{
+        @include btn-style($value);
+    }
+
+    @for $i from 1 through 9 {
+        .text-#{$color}-light-#{$i} {
+            color: color.scale($value, $lightness: $i * 10%)
+        }
+        .text-#{$color}-dark-#{$i} {
+            color: color.scale($value, $lightness: $i * -10%)
+        }
+        .bg-#{$color}-light-#{$i} {
+            background-color: color.scale($value, $lightness: $i * 10%)
+        }
+        .bg-#{$color}-dark-#{$i} {
+            background-color: color.scale($value, $lightness: $i * -10%)
+        }
+    }
+}
+
+$primary-light: color.scale($primary, $lightness: +5%);
+$primary-dark: color.scale($primary, $lightness: -50%);
+$secondary-light: color.scale($secondary, $lightness: +5%);
+$secondary-dark: color.scale($secondary, $lightness: -50%);

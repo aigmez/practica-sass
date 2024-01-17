@@ -1,0 +1,87 @@
+@use "sass:color";
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(40, 40, 40);
+}
+
+h1{
+    color: $secondary;
+    margin: $margin;
+    padding: $padding;
+}
+
+.success{
+    color: $success;
+    // background-color: $primary-dark;
+
+    @include border($success);
+
+    margin: $margin;
+    padding: $padding;
+}
+
+.warning{
+    color: $warning;
+    // background-color: $primary-light;
+
+    @include border($warning);
+
+    margin: $margin;
+    padding: $padding;
+}
+
+.error{
+    color: $error;
+    font-size: $font-size-large;
+    // background-color: $secondary-light;
+
+    @include border($error); 
+
+    margin: $margin;
+    padding: $padding;
+}
+
+.info{
+    color: $info;
+    font-size: $font-size-small;
+    // background-color: $secondary-dark;
+
+    @include border($info);
+
+    margin: $margin;
+    padding: $padding;
+}
+
+.card{
+    color: $violet;
+
+    @include border($violet);
+
+    margin: $margin;
+    padding: $padding;
+
+    .card-title{
+        color: $violet;
+        font-weight: 800;
+        margin-bottom: $margin;
+    }
+
+    .card-body{
+        a{
+            color: $secondary;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+
+    }
+}
+
+
+.btn{
+
+    @include btn-style(rgb(102, 102, 102));
+}
